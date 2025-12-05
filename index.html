@@ -1,18 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible", content="IE=safari">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta rel="stylesheet" href="style.css">
-	<title>MAIN PAGE</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-		<div class="container">
-				<h1>Dr. Hridya Rao Gardner</h1>
-				<h2>Genetic Epidemiologist/Computational Biologist</h2>
-				<p> Scroll to get to know about me</p>
-				<a gref="./about.html"><h2>Click here to learn about me!</h2></a>
-		</div>
+  <header>
+    <h1>Welcome to My Portfolio</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="dropdown">
+      <button class="dropdown-btn">Work Experience</button>
+      <div class="dropdown-content">
+        <p>Add your detailed work experience here...</p>
+      </div>
+    </section>
+
+    <section class="dropdown">
+      <button class="dropdown-btn">Projects</button>
+      <div class="dropdown-content">
+        <p>Add your projects here...</p>
+      </div>
+    </section>
+
+    <section class="dropdown">
+      <button class="dropdown-btn">Education</button>
+      <div class="dropdown-content">
+        <p>Add your education details here...</p>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    const buttons = document.querySelectorAll('.dropdown-btn');
+    buttons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        btn.classList.toggle('active');
+        const content = btn.nextElementSibling;
+        if (content.style.maxHeight) {
+          content.style.maxHeight = null;
+        } else {
+          content.style.maxHeight = content.scrollHeight + 'px';
+        }
+      });
+    });
+  </script>
 </body>
-</html>	
+</html>
+

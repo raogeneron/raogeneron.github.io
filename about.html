@@ -1,26 +1,140 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>About Me</title>
-  <link rel="stylesheet" href="style.css" />
-</head>
-<body>
-  <header>
-    <h1>About Me</h1>
-  </header>
+/* Blue Gradient Portfolio Theme */
+:root {
+  --primary-bg: #001f4d;
+  --secondary-bg: #004bbc;
+  --accent-bg: #0066ff;
+  --text-color: #f5f7fa;
+  --card-bg: white;
+  --card-text: #333;
+  --heading-font: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  --body-font: Arial, Helvetica, sans-serif;
+}
 
-  <main>
-    <section class="about-section">
-      <p>
-        Clinical bioinformatics data scientist with a PhD in Biobehavioral Health and 6+ years of experience developing statistical analysis plans and managing high-volume genomic and EHR datasets. Proficient in SAS, R and Python, QCing SAPs, and generating and maintaining pipelines for multiomics-integration with RWE health outcomes research. Mentored junior analysts and coordinated cross-functional teams to deliver accurate, on-time results within budget.
-      </p>
-    </section>
+body {
+  margin: 0;
+  padding: 0;
+  background: var(--primary-bg);
+  color: var(--text-color);
+  font-family: var(--body-font);
+  line-height: 1.6;
+}
 
-    <div style="margin-top: 30px; text-align: center;">
-      <a href="index.html" style="color: #1a3c6e; font-weight: bold;">← Back to Main Page</a>
-    </div>
-  </main>
-</body>
-</html>
+header {
+  background: linear-gradient(135deg, var(--primary-bg), var(--secondary-bg));
+  color: var(--text-color);
+  padding: 40px 20px;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+header h1 {
+  margin: 0;
+  font-family: var(--heading-font);
+  font-size: 2.5rem;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+}
+
+nav a {
+  color: var(--text-color);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+nav a:hover {
+  color: var(--accent-bg);
+}
+
+main {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 20px;
+  background: var(--card-bg);
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  color: var(--card-text);
+}
+
+.dropdown {
+  background: var(--card-bg);
+  border-radius: 6px;
+  margin-bottom: 25px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  overflow: hidden;
+}
+
+.dropdown-btn {
+  width: 100%;
+  padding: 18px 20px;
+  background: var(--secondary-bg);
+  color: var(--text-color);
+  border: none;
+  outline: none;
+  font-size: 1.15rem;
+  text-align: left;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.dropdown-btn:hover,
+.dropdown-btn.active {
+  background: var(--accent-bg);
+}
+
+.dropdown-content {
+  padding: 0 20px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease;
+  background: var(--card-bg);
+}
+
+.timeline {
+  border-left: 3px solid var(--secondary-bg);
+  padding-left: 20px;
+  margin-left: 10px;
+}
+
+.timeline-item {
+  margin-bottom: 25px;
+  position: relative;
+  padding-bottom: 10px;
+}
+
+.timeline-item::before {
+  content: "";
+  width: 14px;
+  height: 14px;
+  background: var(--accent-bg);
+  border-radius: 50%;
+  position: absolute;
+  left: -27px;
+  top: 5px;
+}
+
+.timeline-date {
+  font-size: 0.9rem;
+  color: #666;
+  display: block;
+  margin-bottom: 6px;
+}
+
+.timeline-item ul {
+  margin: 6px 0 0 20px;
+  padding: 0;
+  list-style: disc;
+}
+
+.timeline-item.highlight {
+  background: linear-gradient(120deg, rgba(0,102,255,0.1), rgba(0,75,204,0.15));
+  padding: 12px 18px;
+  border-radius: 6px;
+}

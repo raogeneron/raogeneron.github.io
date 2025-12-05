@@ -13,6 +13,7 @@
       <ul>
         <li><a href="index.html">Home</a></li>
         <li><a href="about.html">About</a></li>
+        <li><a href="your-resume.pdf" download>Download Résumé</a></li>
       </ul>
     </nav>
   </header>
@@ -26,16 +27,19 @@
     </section>
 
     <section class="dropdown">
-      <button class="dropdown-btn">Projects</button>
-      <div class="dropdown-content">
-        <p>Add your projects here...</p>
-      </div>
-    </section>
-
-    <section class="dropdown">
       <button class="dropdown-btn">Education</button>
       <div class="dropdown-content">
+
         <p>Add your education details here...</p>
+
+        <!-- Nested Projects Dropdown -->
+        <section class="dropdown nested">
+          <button class="dropdown-btn">Projects</button>
+          <div class="dropdown-content">
+            <p>Add your projects here...</p>
+          </div>
+        </section>
+
       </div>
     </section>
   </main>
@@ -56,4 +60,3 @@
   </script>
 </body>
 </html>
-

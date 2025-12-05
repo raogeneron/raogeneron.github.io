@@ -1,140 +1,168 @@
-/* Blue Gradient Portfolio Theme */
-:root {
-  --primary-bg: #001f4d;
-  --secondary-bg: #004bbc;
-  --accent-bg: #0066ff;
-  --text-color: #f5f7fa;
-  --card-bg: white;
-  --card-text: #333;
-  --heading-font: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  --body-font: Arial, Helvetica, sans-serif;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>Welcome to My Portfolio</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="Hridya_Rao_Gardner_Resume.pdf" download>Download Résumé</a></li>
+      </ul>
+    </nav>
+  </header>
 
-body {
-  margin: 0;
-  padding: 0;
-  background: var(--primary-bg);
-  color: var(--text-color);
-  font-family: var(--body-font);
-  line-height: 1.6;
-}
+  <main>
 
-header {
-  background: linear-gradient(135deg, var(--primary-bg), var(--secondary-bg));
-  color: var(--text-color);
-  padding: 40px 20px;
-  text-align: center;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-}
+    <!-- WORK EXPERIENCE DROPDOWN -->
+    <section class="dropdown">
+      <button class="dropdown-btn">Work Experience</button>
+      <div class="dropdown-content">
+        <div class="timeline">
 
-header h1 {
-  margin: 0;
-  font-family: var(--heading-font);
-  font-size: 2.5rem;
-}
+          <div class="timeline-item">
+            <h3>Pennsylvania State University — Genetic Epidemiology Researcher, AHA Pre-doctoral Fellow</h3>
+            <span class="timeline-date">Jan 2024 – Present | University Park, PA</span>
+            <ul>
+              <li>Awarded funding for dissertation research on PCOS metabolic subtypes, PRS computation, and GxE analysis.</li>
+              <li>Research in obesity, cardiovascular disease, and polygenic traits.</li>
+              <li>Conduct GWAS, transcriptomics, epigenetics, and multi-omics integration.</li>
+              <li>AI/ML work in unsupervised clustering, precision medicine, and risk stratification.</li>
+              <li>Published 2 first-authored and 2 co-authored papers in computational biology and genetic epidemiology.</li>
+            </ul>
+          </div>
 
-nav ul {
-  list-style: none;
-  padding: 0;
-  margin-top: 20px;
-  display: flex;
-  justify-content: center;
-  gap: 25px;
-}
+          <div class="timeline-item">
+            <h3>Geisinger Health System — Graduate Intern</h3>
+            <span class="timeline-date">Aug 2021 – Present | Danville, PA</span>
+            <ul>
+              <li>Work with 230K whole exome sequences linked to EHR data.</li>
+              <li>Perform GWAS, TWAS, data cleaning, analysis, and visualization.</li>
+              <li>QC on WGS, WES, 1000 Genomes, TOPMed, RNA-seq, methylation, and PCR datasets.</li>
+              <li>Experience with plink2, htslib, tabix, bioconductor, and genomic formats (VCF, BED, BGEN).</li>
+            </ul>
+          </div>
 
-nav a {
-  color: var(--text-color);
-  text-decoration: none;
-  font-weight: 600;
-  font-size: 1.1rem;
-}
+          <div class="timeline-item">
+            <h3>Epidemiology & Genetics of Populations & Societies Lab — Research Assistant</h3>
+            <span class="timeline-date">Aug 2019 – Present | University Park, PA</span>
+            <ul>
+              <li>Lead analyst on R01 and R21 NIH grants.</li>
+              <li>Statistical modeling: GLMM, GEE, PCA, Cox models, Bayesian methods, time series, clustering, and multilevel modeling.</li>
+              <li>Research on cardiovascular disease, metabolic syndrome, reproductive traits, psychosocial factors, and population health.</li>
+            </ul>
+          </div>
 
-nav a:hover {
-  color: var(--accent-bg);
-}
+          <div class="timeline-item">
+            <h3>Penn State — Instructor</h3>
+            <span class="timeline-date">Aug 2023 – Dec 2023</span>
+            <ul>
+              <li>Taught BBH 119 and BBH 440.</li>
+              <li>Developed lectures, assessments, and provided student mentorship.</li>
+            </ul>
+          </div>
 
-main {
-  max-width: 900px;
-  margin: 40px auto;
-  padding: 20px;
-  background: var(--card-bg);
-  border-radius: 10px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-  color: var(--card-text);
-}
+          <div class="timeline-item">
+            <h3>Penn State — Graduate Teaching Assistant</h3>
+            <span class="timeline-date">Aug 2019 – May 2023</span>
+            <ul>
+              <li>Assisted with teaching in bioethics, epidemiology, and research methods courses.</li>
+              <li>Curated teaching materials and evaluated student work.</li>
+            </ul>
+          </div>
 
-.dropdown {
-  background: var(--card-bg);
-  border-radius: 6px;
-  margin-bottom: 25px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-  overflow: hidden;
-}
+          <div class="timeline-item">
+            <h3>Wake Forest University, ZSR Library — Student Assistant</h3>
+            <span class="timeline-date">Oct 2017 – May 2019</span>
+            <ul>
+              <li>Provided research training and support for undergraduates.</li>
+              <li>Assisted in catalog maintenance and academic resource organization.</li>
+            </ul>
+          </div>
 
-.dropdown-btn {
-  width: 100%;
-  padding: 18px 20px;
-  background: var(--secondary-bg);
-  color: var(--text-color);
-  border: none;
-  outline: none;
-  font-size: 1.15rem;
-  text-align: left;
-  cursor: pointer;
-  transition: background 0.3s ease;
-}
+          <div class="timeline-item">
+            <h3>Sun Pharma (Ranbaxy Ltd) — Research Intern</h3>
+            <span class="timeline-date">Dec 2015 – Jan 2016 | Gurgaon, India</span>
+            <ul>
+              <li>Worked in Quality Control and Toxicology divisions.</li>
+              <li>Performed ADME safety studies using animal models.</li>
+              <li>Compiled regulatory reports on toxicity and therapeutic effects.</li>
+            </ul>
+          </div>
 
-.dropdown-btn:hover,
-.dropdown-btn.active {
-  background: var(--accent-bg);
-}
+        </div>
+      </div>
+    </section>
 
-.dropdown-content {
-  padding: 0 20px;
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.4s ease;
-  background: var(--card-bg);
-}
+    <!-- EDUCATION DROPDOWN -->
+    <section class="dropdown">
+      <button class="dropdown-btn">Education</button>
+      <div class="dropdown-content">
+        <div class="timeline">
 
-.timeline {
-  border-left: 3px solid var(--secondary-bg);
-  padding-left: 20px;
-  margin-left: 10px;
-}
+          <div class="timeline-item highlight">
+            <h3>Ph.D., Biobehavioral Health — Pennsylvania State University</h3>
+            <span class="timeline-date">2019 – 2025 | University Park, PA</span>
+            <ul>
+              <li>Dissertation supported by American Heart Association fellowship.</li>
+              <li>Research in genomics, epidemiology, and computational biology.</li>
+              <li>Dual-title training in Clinical & Translational Science.</li>
+            </ul>
+          </div>
 
-.timeline-item {
-  margin-bottom: 25px;
-  position: relative;
-  padding-bottom: 10px;
-}
+          <div class="timeline-item">
+            <h3>Clinical & Translational Science — Penn State Hershey Medical Center</h3>
+            <span class="timeline-date">2021 – 2025 | Hershey, PA</span>
+          </div>
 
-.timeline-item::before {
-  content: "";
-  width: 14px;
-  height: 14px;
-  background: var(--accent-bg);
-  border-radius: 50%;
-  position: absolute;
-  left: -27px;
-  top: 5px;
-}
+          <div class="timeline-item">
+            <h3>M.S., Biobehavioral Health — Penn State</h3>
+            <span class="timeline-date">2019 – 2021</span>
+          </div>
 
-.timeline-date {
-  font-size: 0.9rem;
-  color: #666;
-  display: block;
-  margin-bottom: 6px;
-}
+          <div class="timeline-item">
+            <h3>M.A., Bioethics — Wake Forest University</h3>
+            <span class="timeline-date">2017 – 2019</span>
+          </div>
 
-.timeline-item ul {
-  margin: 6px 0 0 20px;
-  padding: 0;
-  list-style: disc;
-}
+          <div class="timeline-item">
+            <h3>B.Tech., Biotechnology — Vellore Institute of Technology</h3>
+            <span class="timeline-date">2013 – 2017</span>
+          </div>
 
-.timeline-item.highlight {
-  background: linear-gradient(120deg, rgba(0,102,255,0.1), rgba(0,75,204,0.15));
-  padding: 12px 18px;
-  border-radius: 6px;
-}
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS DROPDOWN (optional nested or separate) -->
+    <section class="dropdown">
+      <button class="dropdown-btn">Projects</button>
+      <div class="dropdown-content">
+        <p>Project content coming soon...</p>
+      </div>
+    </section>
+
+  </main>
+
+  <script>
+    const buttons = document.querySelectorAll('.dropdown-btn');
+    buttons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        btn.classList.toggle('active');
+        const content = btn.nextElementSibling;
+        if (content.style.maxHeight) {
+          content.style.maxHeight = null;
+        } else {
+          content.style.maxHeight = content.scrollHeight + 'px';
+        }
+      });
+    });
+  </script>
+</body>
+</html>

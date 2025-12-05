@@ -80,3 +80,53 @@ main {
   margin: 0;
   line-height: 1.6;
 }
+
+.timeline {
+  border-left: 3px solid #2a5ba8;
+  margin-left: 15px;
+  padding-left: 20px;
+}
+
+.timeline-item {
+  margin-bottom: 25px;
+  padding-bottom: 10px;
+  position: relative;
+}
+
+.timeline-item::before {
+  content: "";
+  width: 12px;
+  height: 12px;
+  background: #2a5ba8;
+  border-radius: 50%;
+  position: absolute;
+  left: -27px;
+  top: 5px;
+}
+
+.timeline-date {
+  font-size: 14px;
+  color: #666;
+  display: block;
+  margin-bottom: 8px;
+}
+
+.timeline-item ul {
+  margin: 0;
+  padding-left: 20px;
+}
+/* Highlight the most recent education */
+.timeline-item.highlight {
+  border-left: 4px solid #204a88;
+  background: #eef3fc;
+  padding: 15px 15px 10px 15px;
+  margin-left: -15px;
+  border-radius: 8px;
+}
+
+.timeline-item.highlight::before {
+  background: #204a88;
+  width: 14px;
+  height: 14px;
+  left: -33px;
+}
